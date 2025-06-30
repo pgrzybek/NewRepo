@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formularz Flask</title>
+</head>
+<body>
+    <h1>Prześlij dane do Pythona</h1>
+    <form action="/wynik" method="post">
+        <label> Imię odbiorcy:</label>
+        <input type="text" name="imie">
+        <br>
+        <label>Jego Rok urodzenia:</label>
+        <input type="text" name="rok" >
+        <br>
+        <label>Twoja wiadomość:</label>
+        <input type="text" name="wiadomosc" >
+        <br>
+        <label>Imie nadawcy</label>
+        <input type="text" name="nadawca" >
+        <button type="submit">Wyślij</button>
+    </form>
+</body>
+</html>
