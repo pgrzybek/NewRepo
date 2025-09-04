@@ -23,7 +23,9 @@ def wynik():
     nadawca = request.form["nadawca"]
     wiek = rokAktualny-int(rok)
     # pobiera dane z formularza
-    return f"Wszystkiego najlepszego {imie} z okazji {wiek}  urodzin <br> {wiadomosc}<br> {nadawca}"
+    rezultat = f"Wszystkiego najlepszego {imie} z okazji {wiek}  urodzin  {wiadomosc}  {nadawca}"
+    return render_template("wynik.html", rezultat=rezultat)
+    #return f"Wszystkiego najlepszego {imie} z okazji {wiek}  urodzin <br> {wiadomosc}<br> {nadawca}"
 
 
 if __name__ == "__main__":
