@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from datetime import datetime
+from waitress import serve
 
 
 app = Flask(__name__)
@@ -7,7 +8,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    # return render_template("index.html")
+    return "Hello"
+
+@app.route("/hello/")
+def hello():
+    return "Hello"
 
 
 @app.route("/wynik", methods=["POST"])
@@ -24,5 +30,5 @@ def wynik():
 
 if __name__ == "__main__":
     #app.run(debug=True)  #to jest uruchamianie lokalnie
-    from waitress import serve
+
     serve(app, host='0.0.0.0', port=8080)# http://127.0.0.1:8080/ lokalny port uruchomiony
