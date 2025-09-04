@@ -28,6 +28,6 @@ def hello():
 
 
 if __name__ == "__main__":
-    #app.run()  #to jest uruchamianie lokalnie
+    app.run()  #to jest uruchamianie lokalnie
 
-    serve(app, host='0.0.0.0', port=8080)# http://127.0.0.1:8080/ lokalny port uruchomiony
+   # serve(app, host='0.0.0.0', port=8080)# http://127.0.0.1:8080/ lokalny port uruchomiony
